@@ -35,7 +35,7 @@
         function startTimer() {
             if (!timerStarted) {
             let startTime = new Date().getTime();
-            let fiveMinutes = 1000 * 60 * 5;
+            let fiveMinutes = 1000 * 60 * 10;
             let endTime = startTime + fiveMinutes;
 
 
@@ -48,7 +48,7 @@
                 let seconds = (timeLeft / 1000) % 60;
                 seconds = Math.round(seconds);
                 seconds = ('0' + seconds).slice(-2);
-                let Text = '0'  + minutes  +  ' : '  +  seconds;
+                let Text = minutes  +  ' : '  +  seconds;
                 timer.innerHTML = Text;
                 } else {
                     timer.innerHTML = '00 : 00';
@@ -77,7 +77,7 @@
     <div class="center margin-top">
         <img src="img/Egg.png">
     </div>
-    <div class="center margin-top timer" id="timer">05 : 00</div>
+    <div class="center margin-top timer" id="timer">10 : 00</div>
 
     <div class="center margin-top timer">
         <img onclick="startTimer()" src="img/Button.png">
